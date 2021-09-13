@@ -23,11 +23,11 @@ public class SWApiTestWithRestAssured {
     RestAssured
         .given()
         .log().all()
-        .get("https://swapi.dev/api/planets/1/")
+        .get("https://swapi.dev/api/planets/1")
         .then().log()
         .ifError()
         .statusCode(is(equalTo(200)))
-        .body("population",equalTo("200000")).log().all();
+        .body("name",equalTo("Tatooine")).log().all();
 
     }
 
