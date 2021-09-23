@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">3</div>
+<div class="counter">4</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">8.653s</div>
+<div class="counter">8.553s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,18 +81,23 @@
 </tr>
 </thead>
 <tr>
-<td class="success">updateJobTest</td>
-<td class="success">0.844s</td>
+<td class="success">bodyResponseTest</td>
+<td class="success">1.189s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">updateNameTest</td>
-<td class="success">6.940s</td>
+<td class="success">responseServerPutMethodTest</td>
+<td class="success">0.862s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">validUpdateDateTest</td>
-<td class="success">0.869s</td>
+<td class="success">responseUpdatedAtTest</td>
+<td class="success">2.256s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">userUpdateTestS1</td>
+<td class="success">4.246s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -117,28 +122,28 @@ Body:
     &quot;job&quot;: &quot;zion resident&quot;
 }
 HTTP/1.1 200 OK
-Date: Thu, 23 Sep 2021 14:41:35 GMT
+Date: Thu, 23 Sep 2021 23:52:25 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 x-powered-by: Express
 access-control-allow-origin: *
-etag: W/&quot;50-hplnFSU4mLieJkkVFh/raJCUCMw&quot;
+etag: W/&quot;50-N3wFoPsJYTDORKsTUNIu7cd79pE&quot;
 via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=RA6RckkIF2c5OL%2FSv55Nn5JloJ1Nmv4mj74cRh4845NEljWJ9C%2Fvc03Fa4JF1%2Bq8W5vMVScFs%2BgK9B9gprzEyFFZoVxAbHZc4ATv%2FHqQwIbLqb5ls5lIsjNoW78%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=LRyHmXIh06%2FNwIXH9pWCBz4oUXIQbyfP2KwvyfoqnhpmRWn2cGiiDLOQLM%2BOWrsxWU7%2BENtcS1xmknBCWiUvltNHLaAlfqyuZzSXRdEtAE7NikfqwzwRI74uDPY%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 693488e239f5e526-ARI
+CF-RAY: 6937afc638b4e52a-ARI
 Content-Encoding: gzip
 alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-27=&quot;:443&quot;; ma=86400
 
 {
     &quot;name&quot;: &quot;morpheus&quot;,
     &quot;job&quot;: &quot;zion resident&quot;,
-    &quot;updatedAt&quot;: &quot;2021-09-23T14:41:35.533Z&quot;
+    &quot;updatedAt&quot;: &quot;2021-09-23T23:52:25.771Z&quot;
 }
 Request method:	PUT
 Request URI:	https://reqres.in/api/users/2
@@ -157,28 +162,28 @@ Body:
     &quot;job&quot;: &quot;zion resident&quot;
 }
 HTTP/1.1 200 OK
-Date: Thu, 23 Sep 2021 14:41:39 GMT
+Date: Thu, 23 Sep 2021 23:52:27 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 x-powered-by: Express
 access-control-allow-origin: *
-etag: W/&quot;50-vqb3HpWIjQb0mKV4e7ih7Iv3ITU&quot;
+etag: W/&quot;50-kCIUtEEqILsNsFBwjAWinCvx/p8&quot;
 via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZX2ujLZZtv2ylhzECm1w3hxRf3IuxFEzjwwauSt8u%2BdSV4F80QQxAMob41YNcLvRIrZHNQEgbaxqcKm9LYwKBFgVldSBjd2S0ObavES20jtLMnXut8JCn%2BuwOR0%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=ddt1MXQABLSlcg1N%2B%2FKsGMy75CTBexiqzRdEcSauxz9Z1aAW7vsseQXq%2FmFmzNMBVIZN%2Fw6%2FAGW5GrQKlSc8btLYB2FvGVRbyaDb528Guq%2FJSnJL2lBJ7UCH5zA%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 693488facf54e52a-ARI
+CF-RAY: 6937afd2783ce526-ARI
 Content-Encoding: gzip
 alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-27=&quot;:443&quot;; ma=86400
 
 {
     &quot;name&quot;: &quot;morpheus&quot;,
     &quot;job&quot;: &quot;zion resident&quot;,
-    &quot;updatedAt&quot;: &quot;2021-09-23T14:41:39.288Z&quot;
+    &quot;updatedAt&quot;: &quot;2021-09-23T23:52:27.600Z&quot;
 }
 Request method:	PUT
 Request URI:	https://reqres.in/api/users/2
@@ -197,28 +202,68 @@ Body:
     &quot;job&quot;: &quot;zion resident&quot;
 }
 HTTP/1.1 200 OK
-Date: Thu, 23 Sep 2021 14:41:40 GMT
+Date: Thu, 23 Sep 2021 23:52:28 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 x-powered-by: Express
 access-control-allow-origin: *
-etag: W/&quot;50-uEGMq5BZzpZ5h31dSOyRILM2PiM&quot;
+etag: W/&quot;50-Uvkr+AaO+u+HEolj6pN3KWDXnMg&quot;
 via: 1.1 vegur
 CF-Cache-Status: DYNAMIC
 Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=KeJDWZ8kGmwfAJLpVXjqbVnT8TXAOdZN7TK47FCvCusmy9g2zvwMTE4mkNofy7yI359ySuox1ZgN7mdu4In42cJifnNq2q9u4VmsCFVzyv7dNsGKTp0UpOsweNQ%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=elZf%2F%2BU8ckPBjgCrhiu1gN9Hta%2FJMucWA0zjI03xJv9sD9hAQuRJ0F6FCqr7TkLsngt4mlqiPOsUVgxl2uxFXQrKBforKr8LKKYgWrp0autO6mbL1wsnRxDqImU%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 Vary: Accept-Encoding
 Server: cloudflare
-CF-RAY: 6934890128d4e51e-ARI
+CF-RAY: 6937afd8ec64e51a-ARI
 Content-Encoding: gzip
 alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-27=&quot;:443&quot;; ma=86400
 
 {
     &quot;name&quot;: &quot;morpheus&quot;,
     &quot;job&quot;: &quot;zion resident&quot;,
-    &quot;updatedAt&quot;: &quot;2021-09-23T14:41:40.315Z&quot;
+    &quot;updatedAt&quot;: &quot;2021-09-23T23:52:28.629Z&quot;
+}
+Request method:	PUT
+Request URI:	https://reqres.in/api/users/2
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;name&quot;: &quot;morpheus&quot;,
+    &quot;job&quot;: &quot;zion resident&quot;
+}
+HTTP/1.1 200 OK
+Date: Thu, 23 Sep 2021 23:52:29 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+x-powered-by: Express
+access-control-allow-origin: *
+etag: W/&quot;50-nZQYLnu8YY/rzCe5tXXPXg8F+vg&quot;
+via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=TEp9b5EghkSMzXIDrfoe04sYauA3%2B6zH90AddWGuMY3n1QTQtOujykZXLoSAV2asNvXhbexjbJ8xVVNsmGZcv624hur%2B3SCIf%2BR3pNTSF5uyIqsczKhR69y6YJI%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 6937afdd4aece51a-ARI
+Content-Encoding: gzip
+alt-svc: h3=&quot;:443&quot;; ma=86400, h3-29=&quot;:443&quot;; ma=86400, h3-28=&quot;:443&quot;; ma=86400, h3-27=&quot;:443&quot;; ma=86400
+
+{
+    &quot;name&quot;: &quot;morpheus&quot;,
+    &quot;job&quot;: &quot;zion resident&quot;,
+    &quot;updatedAt&quot;: &quot;2021-09-23T23:52:29.282Z&quot;
 }
 </pre>
 </span>
@@ -240,7 +285,7 @@ SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further detail
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 23 sep. de 2021 10:41:51</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 23 sep. de 2021 19:52:33</p>
 </div>
 </div>
 </body>
