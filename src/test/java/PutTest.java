@@ -1,11 +1,6 @@
-import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
+import model.PutUserRequest;
+import model.PutUserResponse;
 import org.apache.http.HttpStatus;
-import org.junit.Before;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -13,65 +8,85 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
 public class PutTest extends BaseTest {
-   /* @Before
-
-    public void setup() {
-
-        RestAssured.baseURI = "https://reqres.in";
-        RestAssured.basePath = "/api";
-        RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-        RestAssured.requestSpecification=new RequestSpecBuilder().setContentType(ContentType.JSON).build();
-    }*/
-
 
     @Test
-    public void updateNameTest () {
+    public void userUpdateTestS1() {
 
-        String nameUpdated= given()
-                .body("{\n" +
-                        "    \"name\": \"morpheus\",\n" +
-                        "    \"job\": \"zion resident\"\n" +
-                        "}")
-                .put("users/2")
-                .then()
-                .statusCode(HttpStatus.SC_OK)
-                .extract()
-                .jsonPath()
-                .getString("name");
+        PutUserRequest user = new PutUserRequest();
+        user.setName("morpheus");
+        user.setJob("zion resident");
 
-        assertThat(nameUpdated,equalTo("morpheus"));
-    }
-    @Test
-    public void updateJobTest () {
+        PutUserResponse userResponse =
+                given()
+                        .when()
+                        .body(user)
+                        .put("users/2")
+                        .then()
+                        .extract()
+                        .body()
+                        .as(PutUserResponse.class);
 
-        String jobUpdated = given()
-                .when()
-                .body("{\n" +
-                        "    \"name\": \"morpheus\",\n" +
-                        "    \"job\": \"zion resident\"\n" +
-                        "}")
-                .put("users/2")
-                .then()
-                .statusCode(HttpStatus.SC_OK)
-                .extract()
-                .jsonPath()
-                .getString("job");
-
-        assertThat(jobUpdated,equalTo("zion resident"));
+        assertThat(userResponse.getName(), equalTo("morpheus"));
+        assertThat(userResponse.getJob(), equalTo("zion resident"));
 
     }
     @Test
-    public void validUpdateDateTest() {
+    public void responseServerPutMethodTest () {
 
-        given()
-                .body("{\n" +
-                        "    \"name\": \"morpheus\",\n" +
-                        "    \"job\": \"zion resident\"\n" +
-                        "}")
-                .put("users/2")
-                .then()
-                .statusCode(HttpStatus.SC_OK)
-                .body("updatedAt", notNullValue());
+        PutUserRequest user = new PutUserRequest();
+        user.setName("morpheus");
+        user.setJob("zion resident");
+
+        PutUserResponse userResponse =
+                given()
+                        .when()
+                        .body(user)
+                        .put("users/2")
+                        .then()
+                        .statusCode(HttpStatus.SC_OK)
+                        .extract()
+                        .as(PutUserResponse.class);
+    }
+
+    @Test
+    public void bodyResponseTest () {
+
+        PutUserRequest user = new PutUserRequest();
+        user.setName("morpheus");
+        user.setJob("zion resident");
+
+        PutUserResponse userResponse =
+                given()
+                        .when()
+                        .body(user)
+                        .put("users/2")
+                        .then()
+                        .statusCode(HttpStatus.SC_OK)
+                        .contentType(equalTo("application/json; charset=utf-8"))
+                        .extract()
+                        .as(PutUserResponse.class);
+    }
+
+    @Test
+    public void responseUpdatedAtTest() {
+
+        PutUserRequest user = new PutUserRequest();
+        user.setName("morpheus");
+        user.setJob("zion resident");
+
+        PutUserResponse userResponse =
+                given()
+                        .when()
+                        .body(user)
+                        .put("users/2")
+                        .then()
+                        .statusCode(HttpStatus.SC_OK)
+                        .body("updatedAt",notNullValue())
+                        .extract()
+                        .body()
+                        .as(PutUserResponse.class);
+
+
     }
 }
 
